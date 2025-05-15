@@ -1,6 +1,6 @@
 {
   "name": "@presidio-dev/playwright-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A powerful wrapper around Playwright providing browser automation services with enhanced capabilities for LLMs.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
