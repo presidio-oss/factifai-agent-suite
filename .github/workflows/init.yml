@@ -1,0 +1,45 @@
+name: Initialize Dependencies
+
+on:
+  workflow_call:
+    inputs:
+      workflow_type:
+        required: true
+        type: string
+      version:
+        required: true
+        type: string
+
+jobs:
+  init_node_modules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.10.0
+          run_install: false
+
+      - name: Initialize Package Dependencies
+        run: |
+          pnpm --filter "./packages/*" install
+
+      - name: Cache Dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            **/node_modules
+            .pnpm-store
+            packages/*/node_modules
+          key: ${{ runner.os }}-pnpm-${{ github.ref_name }}-${{ hashFiles('./pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-${{ github.ref_name }}-
+            ${{ runner.os }}-pnpm-
