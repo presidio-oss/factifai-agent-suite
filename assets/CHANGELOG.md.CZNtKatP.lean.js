@@ -1,0 +1,1 @@
+import{_ as a,c as t,o as n,ae as i}from"./chunks/framework.tuuL-SzM.js";const m=JSON.parse('{"title":"docs","description":"","frontmatter":{},"headers":[],"relativePath":"CHANGELOG.md","filePath":"CHANGELOG.md"}'),o={name:"CHANGELOG.md"};function r(l,e,s,d,c,h){return n(),t("div",null,e[0]||(e[0]=[i("",13)]))}const g=a(o,[["render",r]]);export{m as __pageData,g as default};
