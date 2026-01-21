@@ -1,5 +1,16 @@
 # @presidio-dev/factifai-agent
 
+## 3.0.0
+
+### Major Changes
+
+- f1a2484: Add format options and external page support for Playwright script generation
+
+### Patch Changes
+
+- Updated dependencies [f1a2484]
+  - @presidio-dev/playwright-core@3.0.0
+
 ## 2.0.0
 
 ### Major Changes

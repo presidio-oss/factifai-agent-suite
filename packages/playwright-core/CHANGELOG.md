@@ -1,5 +1,11 @@
 # @presidio-dev/playwright-core
 
+## 3.0.0
+
+### Major Changes
+
+- f1a2484: Enhance BrowserService to support external page handling
+
 ## 2.0.0
 
 ### Major Changes
